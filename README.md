@@ -8,9 +8,9 @@
 - Login and signUp Screen
   - signup form
   - redirect to search page
--Browse Page(after autehntication)
+- Browse Page(after autehntication)
   - Header
-    -Main Movie
+    - Main Movie
     - Trailer in Background
     - Movie Title and Description
     - CTA to Play and View Info
