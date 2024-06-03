@@ -1,12 +1,7 @@
-import './App.css'
+import Body from "./components/Body";
 
 function App() {
-
-  return (
-    <div>
-      Hello gpt
-    </div>
-  )
+  return <Body />;
 }
 
-export default App
+export default App;
