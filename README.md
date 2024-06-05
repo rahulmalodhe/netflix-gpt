@@ -1,8 +1,5 @@
 # Netflix GPT
 
-- Created App using Vite
-- Configured Tailwind css
-
 ## Features
 
 - Login and signUp Screen
@@ -20,4 +17,15 @@
   - Search bar
   - Movie Suggestions
 
-## If you have a big project and you have to create a very big for use Formik 
+## Designing the Application
+
+- Created App using Vite
+- Configured Tailwind css
+- Adding routing for /login and /browse screen of netflix
+- creating the header component
+- adding login form
+- Validating form
+- Adding Validation error Message
+- Authentication using fire base
+
+## If you have a big project and you have to create a very big for use Formik
