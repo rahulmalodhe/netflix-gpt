@@ -10,6 +10,7 @@ import {useNavigate} from "react-router-dom";
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const data = useSelector((store) => store.user);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -37,11 +38,10 @@ const Header = () => {
         console.log(error);
       });
   };
-  const data = useSelector((store) => store.user);
   return (
     <div className="absolute z-10 bg-gradient-to-b from-black px-8 py-6 w-screen flex justify-between align-middle">
       <img className="w-44" src={LOGO} alt="logo" />
-      {data?.uid && (
+      {data && (
         <div className="mt-4">
           {/* <span className="text-sm text-white mr-2"> </span> */}
           <img src={USER_LOGO} className=" w-10 inline-block mr-6" />

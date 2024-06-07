@@ -1,11 +1,15 @@
-import React from "react";
+import useNowPLayingMovies from "../hooks/useNowPlayingMovies";
 import Header from "./Header";
+import MainContainer from "./MainContainer";
 
 const Browse = () => {
+  useNowPLayingMovies();
   return (
     <div>
       <Header />
-      <div className=""></div>
+      <div className="">
+        <MainContainer />
+      </div>
     </div>
   );
 };

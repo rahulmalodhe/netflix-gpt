@@ -8,6 +8,8 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
+import {addUserInfo} from "../utils/userSlice";
+import {useDispatch} from "react-redux";
 
 const Login = () => {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -15,6 +17,7 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
   const name = useRef(null);
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,12 +34,20 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
+          }).then(() => {
+            const {uid, email, password, displayName} = auth.currentUser;
+            dispatch(
+              addUserInfo({
+                uid: uid,
+                email: email,
+                password: password,
+                displayName: displayName,
+              })
+            );
           });
         })
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          setError(errorCode + errorMessage);
+          setError(error.code +"-"+ error.message);
         });
     } else {
       signInWithEmailAndPassword(
