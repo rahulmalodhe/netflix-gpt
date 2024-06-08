@@ -15,4 +15,13 @@ export const OPTIONS = {
   },
 };
 
-export const POSTER_URL = "https://image.tmdb.org/t/p/w500/"
+export const POSTER_URL = "https://image.tmdb.org/t/p/w500/";
+
+export const SUPPORTED_LANG = [
+  {identifier: "en", name: "English"},
+  {identifier: "hindi", name: "Hindi"},
+  {identifier: "kannada", name: "Kannada"},
+];
+
+
+export const OPENAI_GPT_KEY = "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"

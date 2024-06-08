@@ -70,9 +70,9 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img src={BACKGROUND_IMG} alt="logo" />
+        <img src={BACKGROUND_IMG} alt="logo" className="w-screen h-screen object-cover"/>
       </div>
-      <form className="w-1/3 absolute bg-black/70  px-8 py-12 mx-auto my-36 right-0 left-0 rounded-lg h-auto text-white">
+      <form className="md:w-1/3 absolute bg-black/70  px-8 py-12 md:mx-auto my-36 right-0 left-0 rounded-lg h-auto text-white z-20 mx-2">
         <div className="w-3/4 mx-auto">
           <h1 className="text-[32px] font-bold text-white mb-2">
             {isSignUp ? "Sign up" : "Sign In"}

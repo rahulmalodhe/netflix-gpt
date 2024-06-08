@@ -38,5 +38,7 @@
 - Populating Video trailer with Trailer and Title and overview
 - Creating Secondary Container
 - Adding custom hooks for fetching top Rated movies
+- Build GPT Search Feature
+- adding media query
 
 ## If you have a big project and you have to create a very big for use Formik

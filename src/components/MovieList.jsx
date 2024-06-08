@@ -1,6 +1,7 @@
 import MovieCard from "./MovieCard";
 
 const MovieList = ({title, movies}) => {
+  console.log("this is movies", movies);
   return (
     <div>
       <h1 className="text-lg md:text-3xl py-4 text-white">{title}</h1>
@@ -8,7 +9,11 @@ const MovieList = ({title, movies}) => {
         <div className="flex">
           {movies?.map((movie) => {
             return (
-                <MovieCard key={movie.id} poster={movie.poster_path} />
+              <>
+                {movie.poster_path && (
+                  <MovieCard key={movie.id} poster={movie.poster_path} />
+                )}
+              </>
             );
           })}
         </div>

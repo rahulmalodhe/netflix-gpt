@@ -5,19 +5,19 @@ const VideoTitle = ({original_title, overview}) => {
     return text.substring(0, 200) + "...";
   };
   return (
-    <div className="absolute w-screen aspect-video bg-gradient-to-tr from-black text-white px-12 pt-[20%]">
-      <h1 className="font-bold text-2xl mb-4 md:text-5xl w-1/2">
+    <div className="absolute w-screen aspect-video text-white px-12 pt-[20%] pb-[50%] md:pb-0">
+      <h1 className="font-bold text-md mb-4 md:text-5xl md:w-1/2 pt-[55%] md:pt-0 w-3/4">
         {original_title}
       </h1>
       <p className="hidden md:inline-block py-6 text-sm w-1/3">
         {truncateString(overview)}
       </p>
       <div className="flex flex-row w-1/4">
-        <button className="px-8 py-2 mr-8 bg-white text-black flex items-center rounded-md hover:opacity-80">
-          <img className="w-6 mr-2" src={Play} alt="play" />
-          <p className="text-lg">Play</p>
+        <button className="px-2 py-2 md:px-8 md:py-2 md:mr-8 bg-white text-black flex items-center rounded-md hover:opacity-80">
+          <img className="w-3 md:w-6 md:mr-2 mr-2" src={Play} alt="play" />
+          <p className="md:text-lg text-sm">Play</p>
         </button>
-        <button className="px-8 py-3 bg-slate-700 flex items-center rounded-md  hover:opacity-80">
+        <button className="hidden md:flex md:px-8 md:py-3 bg-slate-700 items-center rounded-md  hover:opacity-80">
           <svg
           className="mr-2"
             xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ const VideoTitle = ({original_title, overview}) => {
               fill="currentColor"
             ></path>
           </svg>
-          <p>More info</p>
+          <p className="md:text-lg text-sm">More info</p>
         </button>
       </div>
     </div>
