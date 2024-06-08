@@ -10,8 +10,7 @@ export const OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjOGU3NTlhM2YxMTgyMjBkNGI2NjcyZGFmNGYyMmQxOCIsInN1YiI6IjY2NjBjNjNhZTMyNTFiMjUxZjU3NTk3YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.rtvMZCCLdxZjksCqp30Q2R_P5tl8dhUm8dyTcwPwBNA",
+    Authorization: "Bearer" + import.meta.env.VITE_TMDB_KEY,
   },
 };
 
@@ -23,5 +22,4 @@ export const SUPPORTED_LANG = [
   {identifier: "kannada", name: "Kannada"},
 ];
 
-
-export const OPENAI_GPT_KEY = "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"
+export const OPENAI_GPT_KEY = import.meta.env.VITE_OPENAI_GPT_KEY;
