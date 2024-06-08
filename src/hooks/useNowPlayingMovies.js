@@ -7,7 +7,7 @@ const useNowPLayingMovies = () => {
   const dispatch = useDispatch();
 
   const nowPlayingMovies = useSelector(
-    (store) => store.movies?.nowPlayingMovies
+    (store) => store.movies.nowPlayingMovies
   );
 
   const fetchMovies = async () => {
@@ -18,7 +18,7 @@ const useNowPLayingMovies = () => {
 
     const jsonData = await data.json();
 
-    dispatch(addNowPlayingMovies(jsonData?.results));
+    dispatch(addNowPlayingMovies(jsonData.results));
   };
 
   useEffect(() => {

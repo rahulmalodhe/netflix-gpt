@@ -34,7 +34,9 @@
 - Calling api from tmdb to get movies
 - Creating slice for movies
 - Using custom hooks to fetch now playing and trailer data form tmdb api
-- Creating Main container with Video Trailer 
+- Creating Main container with Video Trailer.
 - Populating Video trailer with Trailer and Title and overview
+- Creating Secondary Container
+- Adding custom hooks for fetching top Rated movies
 
 ## If you have a big project and you have to create a very big for use Formik
